@@ -7,7 +7,7 @@ services:
 
         ports:
             - "$JENKINS_PORT:8080"
-            - "50000:50000"
+            - "$JENKINS_SLAVE_AGENT_PORT:50000"
 
         privileged: true
 
@@ -35,3 +35,4 @@ services:
 volumes:
     jenkins_home:
         name: ${JENKINS_VOLUME}
+        external: true
