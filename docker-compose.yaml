@@ -1,6 +1,6 @@
 services:
     jenkins:
-        image: "davidcozens/jenkins:${JENKINS_TAG}"
+        image: "${JENKINS_DOCKER_IMAGE}:${JENKINS_TAG}"
 
         environment:
             - JENKINS_URL=http://${JENKINS_HOST}:${JENKINS_PORT}
